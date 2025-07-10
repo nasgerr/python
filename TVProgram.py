@@ -5,16 +5,18 @@ class TVProgram:
     def add_telecast(self, tl):
         self.items.append(tl)
     def remove_telecast(self, indx):
-        self.items.pop(indx)
+        t_lst = tuple(filter(lambda x: x.uid == indx, self.items))
+        for t in t_lst:
+            self.items.remove(t)
 class Telecast:
     def __init__(self, id, name, duration):
         self.__id = id
         self.__name = name
         self.__duration = duration
     @property
-    def id(self):
+    def uid(self):
         return self.__id
-    @id.setter
+    @uid.setter
     def id(self, value):
         self.__id = value
     @property

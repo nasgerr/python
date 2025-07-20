@@ -1,6 +1,3 @@
-from operator import truediv
-
-
 class TicTacToe:
     def __init__(self):
         self._n = 3

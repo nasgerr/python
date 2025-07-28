@@ -17,12 +17,13 @@ class GeneralView:
     allowed_methods = ('GET', 'POST', 'PUT', 'DELETE')
 
     def render_request(self, request):
-        method = request.get('method')
+        method = request.get('method').upper()
         if method not in self.allowed_methods:
             raise TypeError()
 
-        method_request = method.lower()
-        return self.__getattribute__(method_request)(request)
+        method_request = self.__getattribute__(method.lower())
+        if method_request:
+            return method_request(request)
 
 
 

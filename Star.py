@@ -7,7 +7,7 @@ class Star:
 
 
 class WhiteDwarf(Star):
-    __slots__ = ('_type_star', '_radius')
+    __slots__ = ('_name', '_massa', '_temp', '_type_star', '_radius')
     def __init__(self, name, massa, temp, type_star, radius):
         super().__init__(name, massa, temp)
         self._type_star = type_star
@@ -15,7 +15,7 @@ class WhiteDwarf(Star):
 
 
 class YellowDwarf(Star):
-    __slots__ = ('_type_star', '_radius')
+    __slots__ = ('_name', '_massa', '_temp', '_type_star', '_radius')
     def __init__(self, name, massa, temp, type_star, radius):
         super().__init__(name, massa, temp)
         self._type_star = type_star
@@ -23,7 +23,7 @@ class YellowDwarf(Star):
 
 
 class RedGiant(Star):
-    __slots__ = ('_type_star', '_radius')
+    __slots__ = ('_name', '_massa', '_temp', '_type_star', '_radius')
     def __init__(self, name, massa, temp, type_star, radius):
         super().__init__(name, massa, temp)
         self._type_star = type_star
@@ -31,7 +31,7 @@ class RedGiant(Star):
 
 
 class Pulsar(Star):
-    __slots__ = ('_type_star', '_radius')
+    __slots__ = ('_name', '_massa', '_temp', '_type_star', '_radius')
     def __init__(self, name, massa, temp, type_star, radius):
         super().__init__(name, massa, temp)
         self._type_star = type_star
